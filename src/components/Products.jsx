@@ -4,7 +4,7 @@ let products=[
     {
         id:1,
         name:"cool drink",
-        urlImage:"https://images.unsplash.com/photo-1546333760-38dc4026bc38?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        urlImage:"https://images.unsplash.com/photo-1575596510825-f748919a2bf7?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         price:0.01
     },
     {
@@ -33,18 +33,18 @@ let products=[
     },  {
         id:6,
         name:"vegan salad bowl",
-        urlImage:"https://images.unsplash.com/photo-1519996409144-56c88c9aa612?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        urlImage:"https://plus.unsplash.com/premium_photo-1664648005416-f334a14969b4?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         price:0.01
     }
 ]
 
 const Products=()=>{
-    return(
+    return(<div className="grid">{
         products.map(product=>(
-            <div className="grid">
-            <Product product={product}/>
-            </div>
-        ))
+            
+            <Product key={product.id} product={product}/>
+            
+        ))}</div>
     )
 }
 
